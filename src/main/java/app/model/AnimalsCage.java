@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AnimalsCage {
+    private Animal animal1;
+    private Animal animal2;
     @Autowired
     @Qualifier("timer")
     private Timer timer;
@@ -14,8 +16,6 @@ public class AnimalsCage {
         return timer;
     }
 
-    private Animal animal1;
-    private Animal animal2;
 
     @Autowired
     public AnimalsCage(@Qualifier("cat") Animal animal1, @Qualifier("dog") Animal animal2) {
